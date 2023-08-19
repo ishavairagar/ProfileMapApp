@@ -1,0 +1,15 @@
+<!-- profile-list.component.html -->
+<div class="profile-list">
+    <div *ngFor="let profile of profiles" class="profile">
+      <img [src]="profile.photo" alt="Profile Photo" class="profile-photo">
+      <h3>{{ profile.name }}</h3>
+      <p>{{ profile.description }}</p>
+      <button (click)="showSummaryOnMap(profile)">Summary</button>
+    </div>
+  </div>
+  <div>
+    <app-profile-list></app-profile-list>
+    <app-map [selectedProfile]="selectedProfile"></app-map>
+  </div>
+  
+  
